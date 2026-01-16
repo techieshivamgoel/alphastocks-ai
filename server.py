@@ -26,9 +26,10 @@ def predict(symbol: str):
     symbol = symbol.upper()
 
     data = yf.download(symbol, period="1y")
-
+    
     if len(data) < 120:
-        return {"error": "Not enough data to predict"}
+    return {"error": "Not enough data to predict"}
+
 
     close_series = data["Close"]
     close_prices = close_series.values.reshape(-1, 1)
