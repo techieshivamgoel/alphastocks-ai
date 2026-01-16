@@ -27,7 +27,7 @@ def predict(symbol: str):
 
     data = yf.download(symbol, period="2y")
     
-    if len(data) < 120:
+    if len(data) < 100:
     return {"error": "Not enough data to predict"}
 
 
