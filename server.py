@@ -25,7 +25,7 @@ model = tf.keras.models.load_model("AlphaStocks AI.keras")
 def predict(symbol: str):
     symbol = symbol.upper()
 
-    data = yf.download(symbol, period="1y")
+    data = yf.download(symbol, period="2y")
     
     if len(data) < 120:
     return {"error": "Not enough data to predict"}
